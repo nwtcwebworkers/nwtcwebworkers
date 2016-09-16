@@ -41,7 +41,8 @@
 		?>
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
-		<?php webworkers_2016v2_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+	<!-- <footer class="entry-footer"> -->
+		<?php //webworkers_2016v2_entry_footer(); ?>
+	<!-- </footer><!-- .entry-footer -->
+
 </article><!-- #post-## -->
