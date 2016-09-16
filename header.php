@@ -62,7 +62,8 @@
 					<ul class="nav navbar-nav navbar-right">
 						<!-- <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li> -->
 						<li><a href="#">Meetups</a></li>
-						<li><a href="#">Blog</a></li>
+						<li><a href="#">Alumni</a></li>
+						<!-- <li><a href="#">Blog</a></li> -->
 						<li><a href="#">About</a></li>
 						<?php //wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 
