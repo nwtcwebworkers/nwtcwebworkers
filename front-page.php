@@ -18,7 +18,13 @@ get_header(); ?>
 		<main id="main" class="site-main col-md-8" role="main">
 
 		<?php
-		if ( have_posts() ) :
+		$args = array(
+			'post_type' => array( 'post', 'meetup' ),
+		 'posts_per_page' => 10
+	 );
+		$loop = new WP_Query( $args );
+
+		if ( $loop->have_posts() ) :
 
 			if ( is_home() && ! is_front_page() ) : ?>
 				<header>
@@ -29,7 +35,7 @@ get_header(); ?>
 			endif;
 
 			/* Start the Loop */
-			while ( have_posts() ) : the_post();
+			while ( $loop->have_posts() ) : $loop->the_post();
 
 				/*
 				 * Include the Post-Format-specific template for the content.

@@ -958,6 +958,10 @@ article {
 	padding-left: 20px;
 	margin-bottom: 0;
 }
+.entry-header h1.entry-title {
+    padding-bottom: 10px;
+}
+
 .entry-header .entry-title a {
 	color: hsla(200, 34%, 44%, 1.00);
 	text-decoration: none;

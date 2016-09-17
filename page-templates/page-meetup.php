@@ -1,19 +1,20 @@
 <?php
 /**
- * The template for displaying all single posts.
- * Template Name: 
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
+ * The template for displaying all the email page.
+ * Template Name: Meetup
+ * @link https://codex.wordpress.org/Template_Hierarchy
  *
  * @package webworkers-2016v2
  */
 
 get_header(); ?>
 
+	
 	<div id="primary" class="content-area container">
 		<main id="main" class="site-main col-md-8" role="main">
 
 			<?php
-				$args = array( 'post_type' => 'meetup', 'posts_per_page' => 1 );
+				$args = array( 'post_type' => 'meetup', 'posts_per_page' => 10 );
 				$loop = new WP_Query( $args );
 				while ( $loop->have_posts() ) : $loop->the_post();
 				get_template_part( 'template-parts/content', get_post_format() );
@@ -58,7 +59,15 @@ get_header(); ?>
 						<p>6:00PM - 7:00PM</p>
 					</div>
 
-				</section>				
+				</section>
+				<!-- <section id="categories-2" class="widget widget_categories">
+					<h2 class="widget-title">Cool Events:</h2>
+					<div class="date">
+						<p>BarCamp GB</p>
+						<p>November 2016</p>
+					</div>
+
+				</section> -->
 			</aside>
 	</div><!-- #primary -->
 
