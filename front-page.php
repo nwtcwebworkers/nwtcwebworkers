@@ -64,6 +64,11 @@ get_header(); ?>
 											 <i class="fa fa-trello" aria-hidden="true"></i>
 									 </a>
 							</li>
+						<li>
+									<a href="/email">
+											 <i class="fa fa-envelope" aria-hidden="true"></i>
+									 </a>
+							</li>
 					</ul>
 
 				</section>
@@ -84,7 +89,6 @@ get_header(); ?>
 
 				</section> -->
 			</aside>
-		</aside>
 	</div><!-- #primary -->
 
 <?php

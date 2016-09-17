@@ -30,7 +30,7 @@
 			<div class="container-fluid">
 				<div class="navbar-header">
 
-					<button class="menu-toggle" class="navbar-toggle collapsed" data-toggle="collapse" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'webworkers-2016v2' ); ?>
+					<button type="button" class="navbar-toggle" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'webworkers-2016v2' ); ?>
 						<span class="sr-only">Toggle navigation</span>
 		        <span class="icon-bar"></span>
 		        <span class="icon-bar"></span>
@@ -46,7 +46,11 @@
 								</a>
 							</h1>
 						<?php else : ?>
-							<p class="site-title"><a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+							<p class="site-title">
+								<a class="" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php //bloginfo( 'name' ); ?>
+									<img class="img-responsive img-logo" src="/wp-content/themes/webworkers-2016v2/img/logo-name-inverted.png" />
+								</a>
+							</p>
 						<?php
 						endif;
 
@@ -58,13 +62,13 @@
 					</div><!-- .site-branding -->
 
 				</div>
-				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<div class="collapse navbar-collapse" id="navbar">
 					<ul class="nav navbar-nav navbar-right">
 						<!-- <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li> -->
-						<li><a href="#">Meetups</a></li>
-						<li><a href="#">Alumni</a></li>
+						<li><a href="/meetups">Meetups</a></li>
+						<li><a href="/alumni">Alumni</a></li>
 						<!-- <li><a href="#">Blog</a></li> -->
-						<li><a href="#">About</a></li>
+						<li><a href="/about">About</a></li>
 						<?php //wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 
 					</ul>
