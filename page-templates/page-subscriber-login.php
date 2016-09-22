@@ -1,7 +1,7 @@
 <?php
 /**
  * The template for displaying all the email page.
- * Template Name: Subscriber Login
+ * Template Name: Alumni Login
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
  * @package webworkers-2016v2
@@ -12,8 +12,8 @@ get_header(); ?>
 	
 	<div id="primary" class="content-area container">
 		<main id="main" class="site-main col-md-8" role="main">
-
-			<?php
+            <div class="alumni-form">
+                <?php
 				$args = array( 'redirect' => site_url() );
 
                 if(isset($_GET['login']) && $_GET['login'] == 'failed')
@@ -26,7 +26,18 @@ get_header(); ?>
                 }
                 
                 wp_login_form( $args );
-			?>
+
+                if ( get_option( 'users_can_register' ) ) :
+                    $registration_url = sprintf( '<a class="ww-register btn btn-default" href="%s">%s</a>', esc_url( wp_registration_url() ), __( 'Register' ) );
+                
+                    /** This filter is documented in wp-includes/general-template.php */
+                    echo apply_filters( 'register', $registration_url );
+                endif;
+                    ?>
+            </div>
+			
+                
+			
 
 		</main><!-- #main -->
 		<aside id="secondary" class="col-md-4 widget-area" role="complementary">
