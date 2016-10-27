@@ -66,7 +66,7 @@ get_header(); ?>
 				<section id="categories-2" class="widget widget_categories next-meetup">
 					<h2 class="widget-title text-center">Next Meetup</h2>
 					<div class="date text-center">
-						<p>September 27th</p>
+						<p>October 25th</p>
 						<p>6:00PM - 7:00PM</p>
 					</div>
 
@@ -81,6 +81,8 @@ get_header(); ?>
 				</section> -->
 			</aside>
 	</div><!-- #primary -->
+
+
 
 <?php
 // get_sidebar();
