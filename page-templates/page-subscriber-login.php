@@ -1,7 +1,7 @@
 <?php
 /**
  * The template for displaying all the email page.
- * Template Name: Alumni Login
+ * Template Name: Subscriber Login
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
  * @package webworkers-2016v2
@@ -66,7 +66,7 @@ get_header(); ?>
 				<section id="categories-2" class="widget widget_categories next-meetup">
 					<h2 class="widget-title text-center">Next Meetup</h2>
 					<div class="date text-center">
-						<p>October 25th</p>
+						<p>November 29th</p>
 						<p>6:00PM - 7:00PM</p>
 					</div>
 
