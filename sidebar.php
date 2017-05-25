@@ -10,6 +10,16 @@
 if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 	return;
 }
+
+// WP_Query arguments
+$args = array(
+	'post_type' => array( 'post', 'meetup' ),
+    'posts_per_page' => 1
+);
+
+// The Query
+$query = new WP_Query( $args );
+
 ?>
 
 <aside id="secondary" class="col-md-4 widget-area" role="complementary">
@@ -32,5 +42,38 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
             <a href="/email">Subscribe to Meetup News</a>
         </p>
     </section>
+    
+    
+    <?php
+        if ( $query->have_posts() ) :
+
+			
+
+			/* Start the Loop */
+			while ( $query->have_posts() ) : $query->the_post();
+
+				/*
+				 * Include the Post-Format-specific template for the content.
+				 * If you want to override this in a child theme, then include a file
+				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+				 */
+				get_template_part( 'template-parts/content-upcoming-meetup', get_post_format() );
+
+			endwhile;
+
+			the_posts_navigation();
+
+		else :
+
+			get_template_part( 'template-parts/content-upcoming-meetup', 'none' );
+
+		endif; 
+    
+    
+    
+    ?>
+    
+    
+    
 	<?php dynamic_sidebar( 'sidebar-1' ); ?>
 </aside><!-- #secondary -->
