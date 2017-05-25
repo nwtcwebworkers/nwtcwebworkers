@@ -7,9 +7,11 @@
  * @package webworkers-2016v2
  */
 
+/*
 if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 	return;
 }
+*/
 
 // WP_Query arguments
 $args = array(
